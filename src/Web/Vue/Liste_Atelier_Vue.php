@@ -17,6 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,8 +68,8 @@
        
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Item Subheading</small>
+                <h1 class="page-header">Liste des Ateliers
+                    <small></small>
                 </h1>
             </div>
         </div>
@@ -86,7 +87,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Heading</h3>
+                    <h3 class="panel-title"> </h3>
                   </div>
                   <div class="col col-xs-6 text-right">
                     <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
@@ -94,32 +95,55 @@
                 </div>
               </div>
               <div class="panel-body">
+
+
+                
                 <table class="table table-striped table-bordered table-list">
                   <thead>
                     <tr>
-                        <th><em class="fa fa-cog"></em></th>
-                        <th class="hidden-xs">ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
+                        <th>Titre </em></th>
+                        <th>Type</th>
+                        <th>Durée</th>
+                        <th>Capacité</th>
+                        <th>Théme</th>
+                        <th>Public visé</th>
+                        
                     </tr> 
                   </thead>
                   <tbody>
-                          <tr>
-                            <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                            </td>
-                            <td class="hidden-xs">1</td>
-                            <td>John Doe</td>
-                            <td>johndoe@example.com</td>
-                          </tr>
+                          
+                            
+
+                        
+                               <?php  foreach($ateliers as $row) { ?>
+
+                                     <tr > 
+                                        <td align="center"> <?php echo $row["titre_definitif"];  ?> </td>
+                                        <td align="center"> <?php echo $row["type"];  ?> </td>
+                                        <td align="center"> <?php echo $row["duree"];   ?></td>
+                                        <td align="center"> <?php echo $row["capacite"];  ?> </td>
+                                        <td align="center"> <?php echo $row["theme"];  ?> </td>
+                                        <td align="center"> <?php echo $row["public_vise"];   ?></td>  
+                                   <?php  
+                                    
+                                     }
+
+                                     ?>
+                                     </tr>
+
+                         
                         </tbody>
                 </table>
+
+
+               
+
             
+
               </div>
               <div class="panel-footer">
                 <div class="row">
-                  <div class="col col-xs-4">Page 1 of 5
+                  <div class="col col-xs-4"> page(s)
                   </div>
                   <div class="col col-xs-8">
                     <ul class="pagination hidden-xs pull-right">
@@ -158,5 +182,9 @@
    
 
 </body>
+
+
+
+
 
 </html>
