@@ -11,6 +11,8 @@
 
 </br>
 
+<?php include_once('../Controlleur/Liste_Atelier_Controlleur.php');  ?>
+
     <title>Liste des ateliers</title>
 
     <!-- Bootstrap Core CSS -->
