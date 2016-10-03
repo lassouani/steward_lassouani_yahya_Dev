@@ -1,6 +1,7 @@
 <?php
 include('../Model/AddAtelierModel.php');
 
-add_Atelier($yahya );
+add_Atelier();
+echo $_POST['theme'] ;
 
-include('../Vue/AddAtelier.php');
+header('../Vue/AddAtelier.php');
