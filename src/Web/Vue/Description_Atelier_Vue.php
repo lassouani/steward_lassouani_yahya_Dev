@@ -102,9 +102,10 @@
                             </div>
 
                             <div class="col col-xs-12 text-right">
-                                <button type="button" class="btn btn-default">Modifier</button>
-
-                                <button type="button" class="btn btn-default">Supprimer</button>
+                                <form method="POST" action='../Controlleur/Liste_Atelier_Controlleur.php'>
+                                    <button type="button" class="btn btn-default">Modifier</button>
+                                    <button type="submit" class="btn btn-default"  name="atelier_id" value="<?php echo $_GET["id"]; ?>" >Supprimer</button>
+                                </form>
                             </div>
 
                         </div></div>
