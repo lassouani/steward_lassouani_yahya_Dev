@@ -1,7 +1,11 @@
+
 <?php
-include('../Model/AddAtelierModel.php');
+// On demande la liste des atelier au model
+include_once('../Model/AddAtelierModel.php');
 
-add_Atelier();
-echo $_POST['theme'] ;
 
-header('../Vue/AddAtelier.php');
+if(count($_POST)) {
+	add_Atelier($_POST);
+}
+
+	header('Location: ../Vue/Liste_Atelier_Vue.php');

@@ -55,7 +55,7 @@
 
 <div class="container">
   <h2>Modification d'un Atelier</h2>
-  <form action="Modifier_Atelier_Controlleur.php" method="post"> 
+  <form action="../Controlleur/Modifier_Atelier_Controlleur.php" method="post"> 
         <div class="col-xs-4">
 		
 		
@@ -138,18 +138,21 @@
 						  <input type="text" class="form-control" name="public_vise" value="<?php echo $row['public_vise'];?>">
 						</div> 
 						
+
 						 <div class="form-group">
 						  <label for="text">Contenue pédagogique</label>
 						  <input type="text" class="form-control" name="cont_ped" value="<?php echo $row['cont_ped'];?>">
 						</div>
 	
+						<input type="hidden" name="id" value="<?= $_GET['id']; ?>">
 	<?php
 			     } 
 		     }   ?>
 					
 		
    
-	 <a href="../Controlleur/Modifier_Atelier_Controlleur.php"><input type="button" class="btn btn-default" name="Sauvgarder"value="Sauvgarder"/></a>
+	<!-- <a href="../Controlleur/Modifier_Atelier_Controlleur.php"><input type="button" class="btn btn-default" name="Sauvgarder"value="Sauvgarder"/></a> -->
+	 <button class="btn btn-default">Sauvegarder</button>
 	    </div>
 		
 		

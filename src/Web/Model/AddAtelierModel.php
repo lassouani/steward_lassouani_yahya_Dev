@@ -20,14 +20,14 @@ if ($conn->connect_error) {
  // if ($conn_to_db->connect_error) {
     //  die("Connection failed: " . $conn->connect_error);
  // }
- 
+ //function to add Atelier
 function add_Atelier()
-{
-   
+
+ {  
   global $conn;
   
-	if (!empty($_POST))
-	{
+//	if (!empty($_POST))
+	
 	$titre_definitif = $_POST['titre_definitif'];
 	$theme = $_POST['theme'];
 	$type = $_POST['type'];
@@ -62,20 +62,14 @@ VALUES (\"".$titre_definitif."\",
 			\"".$public_vise."\",
 			\"".$cont_ped."\")";
 			
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+//if (mysqli_query($conn, $sql)) {
+ //   echo "New record created successfully";
+//} else {
+  //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+//}
 
+	mysqli_query($conn, $sql);		
 			
-			
-$result = mysqli_query($conn, $sql);
+//$result = mysqli_query($conn, $sql);
 
-echo $result;
-
-return $result;
-}
-
-header('Location: ../Controlleur/AddAtelierController.php');
-}
+	}
