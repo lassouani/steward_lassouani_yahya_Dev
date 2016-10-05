@@ -5,7 +5,7 @@ include_once('../Model/AddAtelierModel.php');
 
 
 if(count($_POST)) {
-	add_Atelier($_POST);
+	add_Atelier();
 }
 
 	header('Location: ../Vue/Liste_Atelier_Vue.php');

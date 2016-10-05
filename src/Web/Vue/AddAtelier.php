@@ -12,7 +12,7 @@
 
 <div class="container">
   <h2>Ajouter un Atelier</h2>
-  <form action="../Model/AddAtelierModel.php" method="post">
+  <form action="../Controlleur/AddAtelierController.php" method="post">
         <div class="col-xs-4">
 
     <div class="form-group">
