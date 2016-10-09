@@ -186,8 +186,8 @@
                 for (var i = 0; i < elems.length; i++) {
                     elems[i].addEventListener('click', function () {
                         var url = './Description_Atelier_Vue.php?id=' + this.getAttribute('data-id');
-                        window.open(url); // pour ouvrir le lien dans un nouvel onglet
-                        //window.location.href = url; // pour ouvrir le lien dans le même onglet
+                        //window.open(url); // pour ouvrir le lien dans un nouvel onglet
+                        window.location.href = url; // pour ouvrir le lien dans le même onglet
                     });
                 }
             };
